@@ -1,0 +1,106 @@
+@font-face {
+    font-family: lora-regular;
+    src: url(/fonts/Lora/static/Lora-Regular.ttf);
+}
+
+@font-face {
+    font-family: lora-bolditalic;
+    src: url(/fonts/Lora/static/Lora-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: lora-italic;
+    src: url(/fonts/Lora/Lora-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: lora-bold;
+    src: url(/fonts/Lora/static/Lora-Bold.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0px;
+    font-family: lora-regular, Arial, Helvetica, sans-serif;
+}
+
+header {
+    background: linear-gradient(to bottom right, #618d56, #709a61, #82a96e, #8fb478, #92b67a, #97ba7e, #9bbe82, #a3c587, #b0d091, #b8d697, #b9d798, #cae6a5);
+    padding-bottom: 5vh;
+}
+
+a {
+    text-decoration: none;
+    color: #f9faf8;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #f9faf8;
+    font-family: lora-bolditalic;
+    margin-bottom: 0px;
+}
+
+h1 + p {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    border-radius: 8px 8px;
+    background: #3882F6;
+    font-weight: 700;
+    color: #f9faf8;
+    border-color: #3882F6;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links.nav {
+    margin: 40px 50px 0px 0px;
+    gap: 100px;
+}
+
+.top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.top.main-text {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    gap: 0px;
+}
+
+.top img {
+    height: 300px;
+    width: auto;
+    margin-top: 4vh;
+    box-shadow: 30px 50px 80px rgba(0,0,0,.06);
+    border-radius: 4px;
+}
+
+#logo {
+    margin-top: 20px;
+    height: 60px;
+    width: 320px;
+}
+
