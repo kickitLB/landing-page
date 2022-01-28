@@ -60,14 +60,14 @@ a {
     font-size: 20px;
 }
 
-a:hover {
-    color: rgb(240, 217, 87);
-}
-
 /* list-style: none to remove underline. Display:flex to line up links into a row. */
 ul {
     list-style: none;
     display: flex;
+}
+
+ul a:hover {
+    color: rgb(255, 223, 44)
 }
 
 /* I knew I was going to only use one h1 header so that's why I made a general h1 selection. Set margin-bottom to 0px because i wanted to decrease the space between h1 and p. */
@@ -151,9 +151,9 @@ button {
 .top img {
     height: 300px;
     width: auto;
-    margin-top: 4vh;
+    margin-top: 3vh;
     box-shadow: 20px 30px 50px rgba(0,0,0,.5);
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 /* information container is a flexbox containing the products. Display:flex to line up products into a row. gap:100px; to separate each product. */
@@ -184,7 +184,12 @@ button {
     border: #8fb478 5px solid;
     border-radius: 15px 15px;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
-    border-radius: 4px;
+    border-radius: 20px;
+    filter: grayscale(50%);
+}
+
+.main-img:hover {
+    filter: grayscale(0%);
 }
 
 /* had to play around with the quote to get it just right. display:flex column to stack the quote and author and centered. I felt like there was a flex:wrap shouldve been utilized and couldnt figure it out but this works too.*/
