@@ -1,21 +1,21 @@
 @font-face {
     font-family: lora-regular;
-    src: url(/fonts/Lora/static/Lora-Regular.ttf);
+    src: url(../landing-page/fonts/Lora/static/Lora-Regular.ttf);
 }
 
 @font-face {
     font-family: lora-bolditalic;
-    src: url(/fonts/Lora/static/Lora-BoldItalic.ttf);
+    src: url(../landing-page/fonts/Lora/static/Lora-BoldItalic.ttf);
 }
 
 @font-face {
     font-family: lora-italic;
-    src: url(/fonts/Lora/Lora-Italic-VariableFont_wght.ttf);
+    src: url(../landing-page/fonts/Lora/static/Lora-Italic.ttf);
 }
 
 @font-face {
     font-family: lora-bold;
-    src: url(/fonts/Lora/static/Lora-Bold.ttf);
+    src: url(../landing-page/fonts/Lora/static/Lora-Bold.ttf);
 }
 
 /* body set to flex column to stack content. Height set to 100vh to expand the legth of the page. Margin of 0px because there was a white line. Font size set to 18px default. */
@@ -118,7 +118,7 @@ button {
     flex-wrap: wrap;
 }
 
-/* top and left margins were added to provide space from the edge. 100px gap to provide space from individual links. Put these in a flex so i can use flex wrap for web responsivness. */
+/* top and left margins were added to provide space from the edge. 100px gap to provide space from individual links. Put these in a flex so i can use flex wrap for web responsivevness. */
 .links.nav {
     margin: 40px 50px 0px 50px;
     gap: 100px;
