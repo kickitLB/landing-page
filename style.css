@@ -60,6 +60,10 @@ a {
     font-size: 20px;
 }
 
+a:hover {
+    color: rgb(240, 217, 87);
+}
+
 /* list-style: none to remove underline. Display:flex to line up links into a row. */
 ul {
     list-style: none;
