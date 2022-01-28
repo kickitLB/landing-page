@@ -18,6 +18,7 @@
     src: url(/fonts/Lora/static/Lora-Bold.ttf);
 }
 
+/* body set to flex column to stack content. Height set to 100vh to expand the legth of the page. Margin of 0px because there was a white line. Font size set to 18px default. */
 body {
     display: flex;
     flex-direction: column;
@@ -28,29 +29,44 @@ body {
     font-size: 18px;
 }
 
+/* Linear gradients is a good way to make background color feel more dynamic as oppose to setting the color to one color. width of 100vw to take up the entire viewport. */
 header {
     background: linear-gradient(to bottom right, #618d56, #709a61, #82a96e, #8fb478, #92b67a, #97ba7e, #9bbe82, #a3c587, #b0d091, #b8d697, #b9d798, #cae6a5);
     padding-bottom: 5vh;
     width: 100vw;
 }
 
+/* main section set to flex columns and aligned to center. */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* display flex and aligned content in the center. width at 100vw to take up the whole viewport. Added a color gradient to make background color more dynamic. */
+footer {
+    display: flex;
+    background: linear-gradient(to bottom right, #618d56, #709a61, #82a96e, #8fb478, #92b67a, #97ba7e, #9bbe82, #a3c587, #b0d091, #b8d697, #b9d798, #cae6a5);
+    width: 100vw;
+    align-self: center;
+    justify-content: center;
+    color: #f9faf8;
+}
+
+/* text decorations set to none to remove underline */
 a {
     text-decoration: none;
     color: #f9faf8;
     font-size: 20px;
 }
 
+/* list-style: none to remove underline. Display:flex to line up links into a row. */
 ul {
     list-style: none;
     display: flex;
 }
 
+/* I knew I was going to only use one h1 header so that's why I made a general h1 selection. Set margin-bottom to 0px because i wanted to decrease the space between h1 and p. */
 h1 {
     font-size: 48px;
     font-weight: 900;
@@ -59,11 +75,13 @@ h1 {
     margin-bottom: 0px;
 }
 
+/* advanced selector i got from a CSS zero to hero video. since there was only one h1 i used a more general advanced selector. Every p tag followed by a h1 was to get a size of 18px and color. */
 h1 + p {
     font-size: 18px;
     color: #e5e7eb;
 }
 
+/* same argument about h2. There was only one h2 selector. margin: 5vh 0vw to provide more space between header and products. */
 h2 {
     margin: 5vh 0vw;
     font-family: lora-bold;
@@ -72,6 +90,17 @@ h2 {
     color: #1f2937;
 }
 
+/* margin set to 0 to decrease the space between h4 and paragraph */
+h4 {
+    margin: 0px;
+}
+
+/* paragraph still had a margin that was separating h4 (margin collapsing). This was to fix that */
+h4 + p {
+    margin: 0px;
+}
+
+/* set height and width. border-radius:8px 8px; for a rounded corner look. */
 button {
     height: 30px;
     width: 100px;
@@ -82,17 +111,19 @@ button {
     border: #f9faf8 solid 1px;
 }
 
-
+/* navigation was set to flex to line up logo and links. justify-content: space-between; to separate logo and navigation links*/
 .navigation {
     display: flex;
     justify-content: space-between;
 }
 
+/* top and left margins were added to provide space from the edge. 100px gap to provide space from individual links. */
 .links.nav {
     margin: 40px 50px 0px 0px;
     gap: 100px;
 }
 
+/* display:flex to line up main/secondary/button and img. gap of 100px to provide space from the two */
 .top {
     display: flex;
     justify-content: center;
@@ -100,6 +131,7 @@ button {
     gap: 100px;
 }
 
+/* a separate flex container inside .top. Flex column to to stack main/secondary text and button. Width was added to condense the words. */
 .top.main-text {
     display: flex;
     flex-direction: column;
@@ -107,6 +139,7 @@ button {
     gap: 0px;
 }
 
+/* one of the best take aways from this section was adding a box shadow. It made the image more dynamic that gave floating effect above the page. border-radius: 4px for rounded corners.*/
 .top img {
     height: 300px;
     width: auto;
@@ -115,12 +148,14 @@ button {
     border-radius: 4px;
 }
 
+/* information container is a flexbox containing the products. Display:flex to line up products into a row. gap:100px; to separate each product. */
 .information {
     display: flex;
     justify-content: center;
     gap: 100px;
 }
 
+/* product imgs/text were set to flex column and centered with each other. */
 .products {
     display: flex;
     flex-direction: column;
@@ -128,48 +163,52 @@ button {
     color: #1f2937;
 }
 
+/* more advanced selectors I got from the CSS zero to hero video. this means every p that is in .products get separated get a margin-top: 50px; meant to give space between text and imgs. */
 .products > p {
     margin-top: 50px;
 }
 
+/* border-radius for rounded corners and more box-shadows. */
 .main-img {
-    height: 280px;
-    width: 300px;
+    height: 350px;
+    width: 480px;
     border: #8fb478 5px solid;
     border-radius: 15px 15px;
     box-shadow: 20px 20px 30px rgba(0,0,0,.3);
     border-radius: 4px;
 }
 
+/* had to play around with the quote to get it just right. display:flex column to stack the quote and author and centered. I felt like there was a flex:wrap shouldve been utilized and couldnt figure it out but this works too.*/
 .quote {
     width: 100vw;
     height: 50vh;
-    margin: 10vh 0vw 5vh;
+    margin: 5vh 0vw 5vh;
     background-color: #e5e7eb;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
-
+/* margin to separate sign-up-container from the quote container*/
 .sign-up-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 5vh 0vw 10vh;
 }
 
+/* action container has contains text and button. centered the items and used space-around to separate text from button while still giving space on the left and right side of the contents. Linear gradients was used again because using just one color looks outdated. */
 .action-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background: #3882F6;
+    background: linear-gradient(to bottom right, #3882F6, #3173E6, #2968D4, #225DC4, #1D56B9, #124BAE);
     width: 50vw;
+    color: #f9faf8;
+    border-radius: 10px 10px;
+    padding: 50px 5px;
+    
 }
 
+/* action container set to flex column to stack text */
 .action {
     display: flex;
     flex-direction: column;
@@ -181,6 +220,7 @@ button {
     width: 320px;
 }
 
+/* used border-box to get an exact size of the quote. I shrinked the height and width to get the desired affect of a flex-wrap. I cant figure that thing out at the moment. */
 #spirit {
     box-sizing: border-box;
     font-size: 36px;
@@ -189,11 +229,18 @@ button {
     width: 860px;
     height: 180px;
     margin: 0px;
+    color: #1f2937;
 }
 
+/* align-self: flex-end to push the author to the right and aligned to quote with a margin property. */
 #lu {
     font-size: 26px;
     font-family: lora-bold;
     margin: 0vh 25vw 0vh 0vh;
     align-self: flex-end; 
+    color: #1f2937;
+}
+
+#cost {
+    font-family: lora-italic;
 }
