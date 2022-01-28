@@ -111,24 +111,28 @@ button {
     border: #f9faf8 solid 1px;
 }
 
-/* navigation was set to flex to line up logo and links. justify-content: space-between; to separate logo and navigation links*/
+/* navigation was set to flex to line up logo and links. justify-content: space-between; to separate logo and navigation links. flex-wrap: wrap so when page to minimized the navigation links go to the next line.*/
 .navigation {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-/* top and left margins were added to provide space from the edge. 100px gap to provide space from individual links. */
+/* top and left margins were added to provide space from the edge. 100px gap to provide space from individual links. Put these in a flex so i can use flex wrap for web responsivness. */
 .links.nav {
-    margin: 40px 50px 0px 0px;
+    margin: 40px 50px 0px 50px;
     gap: 100px;
+    display:flex;
+    flex-wrap: wrap;
 }
 
-/* display:flex to line up main/secondary/button and img. gap of 100px to provide space from the two */
+/* display:flex to line up main/secondary/button and img. gap of 100px to provide space from the two. Flex wrap added. */
 .top {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 /* a separate flex container inside .top. Flex column to to stack main/secondary text and button. Width was added to condense the words. */
@@ -153,6 +157,7 @@ button {
     display: flex;
     justify-content: center;
     gap: 100px;
+    flex-wrap: wrap;
 }
 
 /* product imgs/text were set to flex column and centered with each other. */
@@ -204,14 +209,16 @@ button {
     width: 50vw;
     color: #f9faf8;
     border-radius: 10px 10px;
-    padding: 50px 5px;
+    padding: 50px 50px;
+    flex: 1;
     
 }
 
-/* action container set to flex column to stack text */
+/* action container set to flex column to stack text. when page minimize button would glitch out. flex:1 solved this issue. */
 .action {
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
 #logo {
